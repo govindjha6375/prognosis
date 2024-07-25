@@ -9,9 +9,9 @@ import joblib
 import math
 from DiseaseModel import DiseaseModel
 from helper import prepare_symptoms_array
-heart_dis = pickle.load(open('model\heart_disease_model.pkl', 'rb'))
-diab_dis = pickle.load(open('model\diabetes_model.pkl', 'rb'))
-park_dis = pickle.load(open('model\parkinsons_model.pkl', 'rb'))
+heart_dis = pickle.load(open('model/heart_disease_model.pkl', 'rb'))
+diab_dis = pickle.load(open('model/diabetes_model.pkl', 'rb'))
+park_dis = pickle.load(open('model/parkinsons_model.pkl', 'rb'))
 
 app = Flask(__name__)
 
@@ -71,7 +71,7 @@ def predict():
 def ValuePredictor2(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1, size)
     if (size == 22):
-        loaded_model = joblib.load(r"model\parkinsons_model.pkl")
+        loaded_model = joblib.load(r"model/parkinsons_model.pkl")
         result = loaded_model.predict(to_predict)
     return result[0]
 
@@ -97,7 +97,7 @@ def predictpark():
 def ValuePredictor(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1, size)
     if (size == 9):
-        loaded_model = joblib.load(r"model\liver.sav")
+        loaded_model = joblib.load(r"model/liver.sav")
         result = loaded_model.predict(to_predict)
     return result[0]
 
