@@ -2,3 +2,5 @@ Flask
 joblib
 scikit-learn==1.5.1
 pandas
+xgboost
+math
