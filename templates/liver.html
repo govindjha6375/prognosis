@@ -149,8 +149,8 @@ fieldset button
             </nav>
     </header><br/><br/>
     <h1 style="text-align:center;">Liver Disease Prediction</h1>
-    <h5 style="text-align:center;">Please enter the patient details</h5>
-
+    <h5 style="text-align:center;">Please enter the patient details</h5> <br>
+    <p style="text-align:center;">Click <a href="/disindex#livDoc">here</a> to Understand Your Inputs </p>
     <form action="{{ url_for('predictliver')}}" method="post" class="form-inline">
       <fieldset>
           <div class="tabcontent" id="new">
@@ -162,43 +162,47 @@ fieldset button
             <div class="form-group">
               <!-- TODO : Year to accept only year date picker -->
               <label for="Gender">Gender</label>
-              <input class="form-control" type="number" id="Gender" name="Gender" required="required" placeholder="1 -> Male, 0 -> Female">
+              <!--<input class="form-control" type="number" id="Gender" name="Gender" required="required" placeholder="1 -> Male, 0 -> Female">-->
+              <select id="Gender" name="Gender" class="form-control">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
             </div>
             <div class="form-group">
               <!-- TODO : Year to accept only year date picker -->
               <label for="Total Bilirubin">Total Bilirubin</label>
-              <input class="form-control" type="number" id="Total Bilirubin" name="Total Bilirubin" required="required" placeholder="eg. 0.8" step="any">
+              <input class="form-control" type="number" id="Total Bilirubin" name="Total Bilirubin" required="required" placeholder="eg. 0.8 mg/dl" step="any">
             </div>
 
             <div class="form-group">
               <label for="Alkaline_Phosphotase">Alkaline Phosphotase</label>
-              <input class="form-control" type="number" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase" required="required" placeholder="eg. 200" step="any">
+              <input class="form-control" type="number" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase" required="required" placeholder="eg. 200 U/L" step="any">
             </div>
 
             <div class="form-group">
               <label for="Alamine_Aminotransferase">Alamine Aminotransferase</label>
-              <input class="form-control" type="number" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" required="required" placeholder="eg. 19" step="any">
+              <input class="form-control" type="number" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" required="required" placeholder="eg. 19 U/L" step="any">
             </div>
             <div class="form-group">
-              <label for="Aspartate_Aminotransferase">Aspartate_Aminotransferase</label>
-              <input class="form-control" step="any" type="number" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" required="required" placeholder="eg. 68">
+              <label for="Aspartate_Aminotransferase">Aspartate Aminotransferase</label>
+              <input class="form-control" step="any" type="number" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" required="required" placeholder="eg. 68 U/L">
             </div>
 
             <div class="form-group">
               <label for="Total_Protiens">Total Protiens</label>
-              <input class="form-control" step="any" type="number" id="Total_Protiens" name="Total_Protiens" required="required" placeholder="eg. 7">
+              <input class="form-control" step="any" type="number" id="Total_Protiens" name="Total_Protiens" required="required" placeholder="eg. 7 g/dl">
             </div>
 
             <div class="form-group">
               <label for="Albumin">Albumin</label>
-              <input class="form-control" step="any" type="number" id="Albumin" name="Albumin" required="required" placeholder="1.1">
+              <input class="form-control" step="any" type="number" id="Albumin" name="Albumin" required="required" placeholder="1.1 g/dl">
             </div>
 
             <div class="form-group">
-              <label for="Albumin_and_Globulin_Ratio">Albumin and Globulin Ratio</label>
+              <label for="Albumin_and_Globulin_Ratio">Albumin and Globulin Ratio (A/G Ratio)</label>
               <input class="form-control" step="any" type="number" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio" required="required" placeholder="0.9">
             </div>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
             </div>
           </fieldset>
       </form>
