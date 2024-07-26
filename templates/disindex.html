@@ -89,6 +89,7 @@
         <h1 style="text-align:center;">PrognosisPlus - Disease Index</h1>
     <p style="text-align:center;">This is a directory of all the diseases that PrognosisPlus can generate assessments for, this index provides in depth.
     details about the disease including its symptoms.</p>
+    <section id="park">
     <h2>1. Parkinson Disease </h2>
     <div style="text-align: center; margin-top: 20px">
        <img style="max-width: 600px" src="static\img\ParkinsonsDisease.png" /><br/><br/>
@@ -118,9 +119,25 @@
 <br>
 Researchers believe it involves a complex interplay of genetic and environmental factors. Some individuals may have a genetic predisposition, while others may be affected by environmental toxins or other unknown factors. The disease's exact origins remain unclear, and its development is likely influenced by multiple contributing factors.</p>
 <br>
+<section id="parkDoc">
+<h4>Documentation</h4>
+<ul><li><b>MDVP:Fo(Hz)</b> - Average vocal fundamental frequency</li>
+<li><b>MDVP:Fhi(Hz)</b> - Maximum vocal fundamental frequency</li>
+<li><b>MDVP:Flo(Hz)</b> - Minimum vocal fundamental frequency</li>
+<li><b>MDVP:Jitter(%) , MDVP:Jitter(Abs) , MDVP:RAP , MDVP:PPQ , Jitter:DDP</b> - Several measures of 
+    variation in fundamental frequency</li>
+<li><b>MDVP:Shimmer , MDVP:Shimmer(dB) , Shimmer:APQ3 , Shimmer:APQ5 , MDVP:APQ , 
+    Shimmer:DDA</b> - Several measures of variation in amplitude</li>
+<li><b>NHR , HNR </b>- Two measures of ratio of noise to tonal components in the voice</li>
+<li><b>RPDE , D2</b> - Two nonlinear dynamical complexity measures</li>
+<li><b>DFA</b> - Signal fractal scaling exponent</li>
+<li><b>pread1 , spread2 , PPE</b> - Three nonlinear measures of fundamental frequency variation</li></ul>
+</section>
 <hr>
 <br>
+</section>
 
+<section id="diab">
 <h2>2. Diabetes</h2>
 <div style="text-align: center; margin-top: 20px">
        <img style="max-width: 600px" src="static/img/diabetes.png" /><br/><br/>
@@ -138,10 +155,37 @@ Researchers believe it involves a complex interplay of genetic and environmental
   <li>nerve damage</li>
   <li>foot problems</li>
 </ul>
+<section id="DiabDoc">
+<h3>Documentation</h3>
+<p>Input Fields Description</p>
+<ul><li><h4>Glucose</h4>
+    Glucose is a simple sugar that serves as a primary source of energy for the body’s cells. Blood glucose levels indicate how much glucose is present in the bloodstream at a given time.
+<br>Units: Blood glucose levels are typically measured in milligrams per deciliter (mg/dL)
+<br>For someone without diabetes, a normal level is usually between 70 to 125 mg/dL.</li>
+<li><h4>Blood Pressure</h4>
+Blood pressure is the force exerted by circulating blood on the walls of the body’s arteries, the major blood vessels in the body. It is typically measured in millimeters of mercury (mmHg) and recorded as two values:
+<br>
+Systolic Pressure: The pressure when the heart beats and pumps blood. <br>
+Diastolic Pressure: The pressure when the heart is at rest between beats</li>
+<li><h4>Skin Thickness</h4>
+    Skin Thickness typically refers to the measurement of the thickness of a fold of skin and the subcutaneous fat layer beneath it. The triceps skin fold thickness is a common site for this measurement, which is taken at the back of the upper arm
+<br>Units: Skin thickness is measured in millimeters (mm)
+<br>The normal range for skin thickness can vary depending on age, sex, and overall body composition. Generally, higher values indicate higher levels of subcutaneous fat.</li>
+<li><h4>Insulin</h4></li>
+Insulin is a hormone produced by the beta cells of the pancreas. It plays a crucial role in regulating blood glucose levels by facilitating the uptake of glucose into cells, where it can be used for energy or stored for future use.
+<br>Units: Insulin levels in the blood are typically measured in micro-units per milliliter (µU/mL) or picomoles per liter (pmol/L)
+<li><h4>Diabetes Pedigree Function</h4>
+    The Diabetes Pedigree Function (DPF) is a measure that provides information on the genetic predisposition of an individual to diabetes. It quantifies the likelihood of diabetes based on family history and the prevalence of diabetes in genetic relatives
+<br>DPF = 0.2: Low genetic risk; family history has minimal impact on diabetes risk. <br>
+DPF = 0.8: Moderate genetic risk; some family history of diabetes, suggesting a need for awareness and possible lifestyle adjustments. <br>
+DPF = 1.5: High genetic risk; significant family history of diabetes, indicating the need for proactive screening and preventive measures.</li></ul>
+</section>
 <br>
 <hr>
 <br>
+</section>
 
+<section id="heart">
 <h2>3.Heart Disease</h2>
 <div style="text-align: center; margin-top: 20px">
        <img style="max-width: 600px" src="static/img/heart.png" /><br/>
@@ -158,10 +202,80 @@ Many forms of heart disease can be prevented or treated with healthy lifestyle c
   <li>Pain, numbness, weakness or coldness in your legs or arms if the blood vessels in those parts of your body are narrowed</li>
   <li>Pain in the neck, jaw, throat, upper abdomen or back</li>
 </ul>
+<section id="heartDoc">
+<h3>Documentation</h3>
+<p>Input Field Description</p>
+<ul>
+<li><h4>Chest Pain Types</h4>
+<ul>
+    <li><b>Typical Angina</b> <br>
+        Description: This type of chest pain is often brought on by exertion or stress and is relieved by rest or nitroglycerin. 
+        It is characterized by discomfort or pressure in the chest that can radiate to the arms, neck, jaw, or back.</li>
+    <li><b>Atypical Angina</b><br>
+        Description: This chest pain does not follow the typical pattern of angina. It may occur at rest and is not necessarily related to 
+        physical exertion or stress. The pain may be sharp or fleeting and can vary in location and intensity.</li>
+    <li> <b>Non-Anginal Pain</b> <br>
+        Description: This type of chest pain is not related to heart disease. It may be due to other causes such as gastrointestinal, 
+        musculoskeletal, or pulmonary issues. The pain can be variable in nature and is often not related to physical exertion.</li>
+    <li><b>Asymptomatic</b> <br>
+        Description: The patient does not experience any chest pain. This category is used for patients who have heart disease but do not report
+         symptoms of chest pain.</li>
+</ul></li>
+<li><h4>Resting Blood Pressure</h4>
+    It represents the patient's blood pressure measured in millimeters of mercury (mm Hg) while they are at rest. This is a critical indicator used in assessing cardiovascular health.</li>
+<li><h4>Fasting Blood Sugar</h4>
+    It is a binary indicator that signifies whether a patient's fasting blood sugar level is above a certain threshold, typically used to identify potential diabetes or prediabetes</li>
+<li><h4>Resting Electrocardiographic Results</h4>
+    It represents the results of an electrocardiogram (ECG or EKG) taken while the patient is at rest. This test records the electrical activity of the heart and can reveal various cardiac conditions.
+<ul><li><b>Normal ECG</b> <br>
+    Description: Indicates that the ECG results show no significant abnormalities in the heart's electrical activity. The heart rhythm is normal, and there are no signs of ischemia, arrhythmias, or other heart conditions.</li>
+<li><b>Abnormal ECG</b> <br>
+    Description: Indicates that the ECG results show some abnormalities in the heart's electrical activity. This could include signs of previous myocardial infarction (heart attack), left ventricular hypertrophy (thickening of the heart muscle), or other cardiac conditions. Further investigation and evaluation by a healthcare professional are usually required</li></ul></li>
+<li><h4>Maximum Heart Rate Achieved</h4>
+    The highest number of heartbeats per minute recorded during a stress test, where the patient exercises to increase their heart rate
+<br>Units: Beats per minute (bpm)</li>
+<li><h4>Exercise Induced Angina</h4>
+    It indicates whether the patient experienced angina (chest pain) during exercise, which is a critical factor in assessing the presence and severity of heart disease.
+<ul><li><b>No exercise-induced angina</b> <br>
+    Description: The patient did not experience chest pain during physical exertion. This can be a sign that the heart is receiving sufficient blood flow during increased physical activity.</li>
+<li><b>Exercise-induced angina</b> <br>
+    Description: The patient experienced chest pain during physical exertion. This is often an indication of underlying coronary artery disease, as the heart muscle may not be receiving enough oxygen-rich blood during times of increased demand</li></ul></li>
+<li><h4>Oldpeak</h4>
+    Refers to ST depression induced by exercise relative to rest. It measures the deviation of the ST segment on an electrocardiogram (ECG) during peak exercise compared to its position at rest.
+<br>Unit: Millimeters (mm)</li>
+<li><h4>Slope</h4>
+    Typically refers to the slope of the peak exercise ST segment, which describes the trend or direction of the ST segment on an electrocardiogram (ECG) during peak exercise. This parameter helps in assessing the heart's response to stress and can provide insights into the presence of ischemia or other cardiac conditions
+<ul><li><b>Upsloping</b> <br>
+    Description: The ST segment has an upward trend during exercise. This is generally considered less indicative of ischemia and may be a normal or less concerning finding.</li>
+<li><b>Flat or horizontal</b> <br>
+    Description: The ST segment remains level or flat during exercise. This is a more concerning finding and can indicate a higher likelihood of ischemia or reduced blood flow to the heart muscle.</li>
+<li><b>Downsloping</b> <br>
+    Description: The ST segment trends downward during exercise. This is typically the most concerning finding and strongly suggests the presence of ischemia, indicating significant coronary artery disease or blockage</li></ul></li>
+<li><h4>Number of Major Vessels Colored by Fluoroscopy (ca)</h4>
+    Typically stands for the number of major vessels (0-2) colored by fluoroscopy. Fluoroscopy is a type of medical imaging that shows a continuous X-ray image on a monitor, much like an X-ray movie. This procedure is often used to see the blood flow through the vessels.
+<ul><li><b>No major vessels colored (normal)</b> <br>
+    Description: Indicates that none of the major coronary vessels showed significant blockage or narrowing during the fluoroscopy procedure</li>
+<li><b>One major vessel colored</b> <br>
+    Description: Indicates that one major coronary vessel showed significant blockage or narrowing.</li>
+<li><b>Two major vessels colored</b> <br>
+    Description: Indicates that two major coronary vessels showed significant blockage or narrowing.</li></ul></li>
+<li><h4>Thalassemia</h4>
+<ul><li><b>Unknown or Not Applicable</b> <br>
+    Description: Indicates that the information regarding thalassemia or related abnormalities is missing or not applicable in the dataset for this record. It can also mean that the thalassemia test was not performed or was inconclusive.</li>
+<li><b>Normal</b> <br>
+    Description: No thalassemia or related abnormalities detected. This is considered a normal finding</li>
+<li><b>Fixed Defect</b> <br>
+    Description: Indicates a fixed defect in the heart muscle, often resulting from previous damage such as a heart attack. This defect does not change with exercise</li>
+<li><b>Reversible Defect</b> <br>
+    Description: Indicates a reversible defect, which means there is a part of the heart that shows abnormalities during stress but normalizes at rest. This can be indicative of ischemia, where blood flow is temporarily restricted but can be restored, often due to coronary artery disease.</li></ul></li>
+</ul>
+</section>
 <br>
 <hr>
 <br>
+</section>
 
+<section id="liver">
 <h2>4.Liver Disease</h2>
 <div style="text-align: center; margin-top: 20px">
        <img style="max-width: 600px" src="static/img/liver.png" /><br/>
@@ -178,9 +292,42 @@ Liver disease is a broad term that covers all the potential problems that cause 
   <li>right upper quadrant abdominal pain, and </li>
   <li>jaundice (a yellow discoloration of the skin due to elevated bilirubin concentrations in the bloodstream).</li>
 </ul>
+<section id="livDoc">
+<h3>Documentation</h3>
+<ul><li><h4>Total Bilirubin</h4>
+    Total Bilirubin measures the overall level of bilirubin in the blood, which includes both direct (conjugated) and indirect (unconjugated) bilirubin. Elevated levels of bilirubin can indicate liver dysfunction or other conditions affecting the liver or bile ducts
+<br>Unit: The unit for measuring total bilirubin is typically milligrams per deciliter (mg/dL) <br>
+The normal range for total bilirubin is usually between 0.1 to 1.2 mg/dL</li>
+<li><h4>Alkaline Phosphatase</h4>
+    Alkaline phosphatase is an enzyme that helps in the breakdown of proteins and is involved in the metabolism of phosphate in the body. It is particularly important in the liver and bone health.
+<br>Units: The unit for measuring alkaline phosphatase is typically units per liter (U/L) or sometimes international units per liter (IU/L)
+<br>Normal Range: The normal range for alkaline phosphatase can vary depending on the laboratory and age, but it generally falls between 30 to 120 U/L</li>
+<li><h4>Alanine Aminotransferase</h4>
+    Alanine aminotransferase is an enzyme that is involved in the process of converting amino acids into energy. It is primarily located in the liver, but smaller amounts are also found in the kidneys, heart, and muscles
+<br>Units: The unit for measuring ALT is typically units per liter (U/L)
+<br>Normal Range: The normal range for ALT levels can vary depending on the laboratory and the method used, but it is generally between 7 to 56 U/L. The normal range might differ slightly based on age, sex, and specific health conditions</li>
+<li><h4>Aspartate Aminotransferase</h4>
+    Aspartate aminotransferase is involved in the metabolism of amino acids and is found in high concentrations in the liver and heart. It is released into the bloodstream when tissues are damaged.
+<br>Units: The unit for measuring AST is typically units per liter (U/L) <br>
+Normal Range: The normal range for AST levels can vary depending on the laboratory and the method used, but it is generally between 10 to 40 U/L</li>
+<li><h4>Total Proteins</h4>
+    Total proteins refer to the sum of all proteins in the blood, including albumin and globulins. Albumin is the main protein made by the liver and helps maintain blood volume and pressure, while globulins include a variety of proteins involved in immune response, transport, and blood clotting
+<br>Units: The unit for measuring total proteins is typically grams per deciliter (g/dL) <br>
+Normal Range: The normal range for total protein levels in the blood generally falls between 6.0 to 8.3 g/dL. This range can vary slightly depending on the laboratory and individual factors.</li>
+<li><h4>Albumin</h4>
+    Albumin is a protein produced by the liver that helps maintain blood volume and pressure by keeping fluid from leaking out of blood vessels. It also transports various substances in the blood, including hormones, vitamins, and drugs
+<br>Units: The unit for measuring albumin is typically grams per deciliter (g/dL).
+<br>Normal Range: The normal range for albumin levels in the blood generally falls between 3.5 to 5.0 g/dL. This range can vary slightly depending on the laboratory and individual factors.</li>
+<li><h4>Albumin and Globulin Ratio (A/G Ratio)</h4>
+    The A/G ratio is calculated by dividing the albumin level by the globulin level in the blood. Albumin and globulins are two main types of proteins in the blood plasma:
+    <br>
+    Albumin: Produced by the liver, helps maintain blood volume and pressure, and transports various substances. <br>
+    Globulins: A group of proteins that include antibodies (immunoglobulins) and other proteins involved in immune response and transport
+<br>Normal Range: The normal range for the albumin-to-globulin ratio is typically between 1.0 to 2.5. The exact range may vary depending on the laboratory and specific population</li></ul>
+</section>
   <br>
   <hr>
-
+</section>
 	</div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
