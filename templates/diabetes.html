@@ -150,7 +150,8 @@ fieldset button
             </nav>
     </header><br/><br/>
     <h1 style="text-align:center;">Diabetes Prediction</h1>
-    <h5 style="text-align:center;">Please enter the patient details</h5>
+    <h5 style="text-align:center;">Please enter the patient details</h5><br>
+    <p style="text-align:center;">Click <a href="/disindex#DiabDoc">here</a> to Understand Your Inputs </p>
     <form action="{{ url_for('predictt')}}" method="post" class="form-inline">
         <fieldset>
             <div class="tabcontent" id="new">
@@ -186,7 +187,7 @@ fieldset button
                     <label for="age">Patient Age in Years</label>
                     <input class="form-control" type="number" name="age" placeholder="eg. 34" required="required"/>
                   </div>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
             </div>
         </fieldset>
     </form>
