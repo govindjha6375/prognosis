@@ -24,9 +24,8 @@ h1, h2, h3, h4, h5{
 
 form {
 	margin-top: 3%;
-	margin-left: 29%;
+	margin-left: 22%;
 	margin-right: 21%;
-
 }
 
 form fieldset{
@@ -53,7 +52,7 @@ fieldset label {
 	padding: 23px;
 	font-size: 20px;
 	display: inline-block;
-    width  : 240px;
+    width  : 340px;
 }
 fieldset input{
 	padding:8px;
@@ -113,6 +112,9 @@ fieldset button
 	border-color: #257a7a;
 	box-shadow: 6px 13px 13px 0px black;
 	background-color: #ebfffa;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
 }
 </style>
 <body>
@@ -153,19 +155,19 @@ fieldset button
                 </div>
             </nav>
     </header><br/><br/>
-    <h1 style="text-align:center;">Disease Prediction</h1>
+    <h1 style="text-align: center;">Disease Prediction</h1>
     <h5 style="text-align:center;">Please enter the symptoms</h5>
     <form action="/predict" method="post">
         <fieldset>
             <div class="tabcontent" id="new" style="text-align: center;" >
-                <label for="symptoms">Select your Symptoms:</label><br>
+                <label for="symptoms"><b>Select your symptoms:</b></label><br>
                 <select id="symptoms" name="symptoms" multiple="multiple">
                     {% for symptom in symptoms %}
                         <option value="{{ symptom }}">{{ symptom.capitalize() }}</option>
                     {% endfor %}
                 </select>
                 <br><br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
+                <button type="submit" class="btn btn-primary btn-lg">Predict</button>
             </div>
         </fieldset>
     </form>
