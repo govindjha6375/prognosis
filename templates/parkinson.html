@@ -149,8 +149,8 @@ fieldset button
             </nav>
     </header><br/><br/>
     <h1 style="text-align:center;">Parkinson Disease Prediction</h1>
-    <h5 style="text-align:center;">Please enter the patient details</h5>
-
+    <h5 style="text-align:center;">Please enter the patient details</h5><br>
+    <p style="text-align:center;">Click <a href="/disindex#parkDoc">here</a> to Understand Your Inputs </p>
     <form action="{{ url_for('predictpark')}}" method="post" class="form-inline">
       <fieldset>
           <div class="tabcontent" id="new">
@@ -246,7 +246,7 @@ fieldset button
               <label for="PPE">PPE</label>
               <input class="form-control" type="number" id="PPE" name="PPE" required="required" placeholder="eg. 0.1385" step="any">
             </div>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
             </div>
           </fieldset>
       </form>
