@@ -30,7 +30,7 @@ form fieldset{
 	padding: 30px;
 	border-width: 20px;
 	border-style: groove;
-    border-color: #5a5a5a;
+  border-color: #5a5a5a;
 	background-color: #fff;
 }
 
@@ -46,11 +46,13 @@ fieldset h1 {
 
 fieldset label {
 	margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 	margin-right: 40px;
 	padding: 23px;
 	font-size: 20px;
-	display: inline-block;
-    width  : 240px;
+  width  : 230px;
 }
 fieldset input{
 	padding:8px;
@@ -76,7 +78,6 @@ fieldset button
 	right: 0px;
 	margin-top: 15px;
 }
-
 
 .submit{
 	margin-left: 60px;
@@ -150,8 +151,8 @@ fieldset button
             </nav>
     </header><br/><br/>
     <h1 style="text-align:center;">Heart Disease Prediction</h1>
-    <h5 style="text-align:center;">Please enter the patient details</h5>
-
+    <h5 style="text-align:center;">Please enter the patient details</h5><br>
+    <p style="text-align:center;">Click <a href="/disindex#heartDoc">here</a> to Understand Your Inputs </p>
     <form action="{{ url_for('predictheart')}}" method="post" class="form-inline">
         <fieldset>
             <div class="tabcontent" id="new">
@@ -162,53 +163,83 @@ fieldset button
                  </div>
                   <div class="form-group">
                     <label for="sex">Sex</label>
-                    <input class="form-control" type="number" name="sex" placeholder="eg. 0 for male" required="required"/>
+                    <select id="sex" name="sex" class="form-control">
+                      <option value="0">Male</option>
+                      <option value="1">Female</option>
+                  </select>
                   </div>
                   <div class="form-group">
-                    <label for="cp">CP</label>
-                    <input class="form-control" type="number" name="cp" placeholder="eg. 2" required="required"/>
+                    <label for="cp">Chest  Pain  Types </label>
+                    <select id="cp" name="cp" class="form-control">
+                      <option value="0">Typical Angina</option>
+                      <option value="1">Atypical Angina</option>
+                      <option value="2">Non-Anginal Pain</option>
+                      <option value="3">Asymptomatic</option>
+                  </select>
                   </div>
                   <div class="form-group">
-                    <label for="trestbps">Trestbps</label>
+                    <label for="trestbps">Resting Blood Pressure</label>
                     <input class="form-control" type="number" name="trestbps" placeholder="eg. 120" required="required"/>
                   </div>
                   <div class="form-group">
-                    <label for="chol">Cholesterol</label>
+                    <label for="chol">Total Cholesterol (mg/dl)</label>
                     <input class="form-control" type="number" name="chol" placeholder="eg. 190" required="required"/>
                   </div>
                   <div class="form-group">
-                    <label for="fbs">fbs</label>
-                    <input class="form-control" type="number" name="fbs" placeholder="eg. 0" required="required"/>
+                    <label for="fbs">Fasting Blood Sugar</label>
+                    <select id="fbs" name="fbs" class="form-control">
+                      <option value="0">less than 120 mg/dl</option>
+                      <option value="1">greater than or equal to 120 mg/dl</option>
+                  </select>
                   </div>
                   <div class="form-group">
-                    <label for="restecg">RESTECG</label>
-                    <input class="form-control" type="number" name="restecg" placeholder="eg. 0" required="required"/>
+                    <label for="restecg">Resting Electrocardiographic Results</label>
+                    <select id="restecg" name="restecg" class="form-control">
+                      <option value="0">Normal ECG</option>
+                      <option value="1">Abnormal ECG</option>
+                  </select>
                   </div>
                   <div class="form-group">
-                    <label for="thalach">Thalach</label>
+                    <label for="thalach">Maximum Heart Rate Achieved</label>
                     <input class="form-control" type="number" name="thalach" placeholder="eg. 150" required="required"/>
                   </div>
                   <div class="form-group">
-                    <label for="exang">EXANG</label>
-                    <input class="form-control" type="number" name="exang" placeholder="eg. 0" required="required"/>
+                    <label for="exang">Exercise Induced Angina</label>
+                    <select id="exang" name="exang" class="form-control">
+                      <option value="0">No exercise-induced angina</option>
+                      <option value="1">Exercise-induced angina</option>
+                  </select>
                   </div>
                   <div class="form-group">
                     <label for="oldpeak">Old Peak</label>
                     <input class="form-control" type="number" step="0.01" name="oldpeak" placeholder="eg. 1.5" required="required"/>
                   </div>
                   <div class="form-group">
-                    <label for="slope">SLOPE</label>
-                    <input class="form-control" type="number" name="slope" placeholder="eg. 1" required="required"/>
+                    <label for="slope">Slope</label>
+                    <select id="slope" name="slope" class="form-control">
+                      <option value="0">Upsloping</option>
+                      <option value="1">Flat or horizontal</option>
+                      <option value="2">Downsloping</option>
+                  </select>
                   </div>
                   <div class="form-group">
-                    <label for="ca">CA</label>
-                    <input class="form-control" type="number" name="ca" placeholder="eg. 2" required="required"/>
+                    <label for="ca">Number of Major Vessels Colored by Fluoroscopy (ca)</label>
+                    <select id="ca" name="ca" class="form-control">
+                      <option value="0">No major vessels colored (normal)</option>
+                      <option value="1">One major vessel colored</option>
+                      <option value="2">Two major vessels colored</option>
+                  </select>
                   </div>
                   <div class="form-group">
-                    <label for="thal">THAL</label>
-                    <input class="form-control" type="number" name="thal" placeholder="eg. 2" required="required"/>
+                    <label for="thal">Thalassemia</label>
+                    <select id="thal" name="thal" class="form-control">
+                      <option value="0">Unknown or Not Applicable</option>
+                      <option value="1">Normal</option>
+                      <option value="2">Fixed Defect</option>
+                      <option value="3">Reversible Defect</option>
+                  </select>
                   </div>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg">Predict</button>
 
             </div>
         </fieldset>
